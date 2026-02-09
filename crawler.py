@@ -92,7 +92,7 @@ def get_links(page_title):
         headers = {"User-Agent": "MyWikiCrawler/1.0 (https://yourwebsite.com; email@example.com)"}
     
         time.sleep(0.1)
-        response = requests.get(WIKI_API, params=params, headers=headers)
+        response = requests.get(wiki_url, params=params, headers=headers)
         if response.status_code != 200:
             print(f"Error fetching page: {page_title}")
             break
